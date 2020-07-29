@@ -8,14 +8,15 @@ const shuffleArray = (array) => {
 }
 const addChildren = (cards) => {
 	const parent = document.getElementById('cards');
-	parent.innerHTML = "";
 	for (let i = 0; i < cards.length; i++) {
-		const card = document.createElement('div');
-		card.id = cards[i];
+		let card = document.getElementById(`card-${i + 1}`);
+		if (!card) {
+			card = document.createElement('div');
+			parent.appendChild(card);
+		}
+		card.id = `card-${i + 1}`;
 		card.innerHTML = cards[i];
-		card.classList.add('card');
-		card.classList.add(`c${cards[i]}`);
-		parent.appendChild(card);
+		card.className = `card c${cards[i]}`
 	}
 }
 const shuffle = () => {
