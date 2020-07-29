@@ -6,7 +6,7 @@ const shuffleArray = (array) => {
 		[array[i], array[j]] = [array[j], array[i]];
 	}
 }
-const addChildren = (cards) => {
+const setChildren = (cards) => {
 	const parent = document.getElementById('cards');
 	for (let i = 0; i < cards.length; i++) {
 		let card = document.getElementById(`card-${i + 1}`);
@@ -21,15 +21,15 @@ const addChildren = (cards) => {
 }
 const shuffle = () => {
 	shuffleArray(cardSet)
-	addChildren(cardSet)
+	setChildren(cardSet)
 	sorted = false;
 }
 const sort = () => {
 	if (!sorted) {
 		cardSet.sort((a, b) => a - b)
-		addChildren(cardSet)
+		setChildren(cardSet)
 		sorted = true;
 	}
 }
 
-addChildren(cardSet)
+setChildren(cardSet)
