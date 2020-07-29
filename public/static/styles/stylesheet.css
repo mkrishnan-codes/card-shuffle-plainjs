@@ -109,7 +109,9 @@ h4 {
     justify-content: center;
     padding: 20px 0px 20px 0px;
 }
-
+.btn:active { 
+	transform: scale(0.98); 
+} 
 @media only screen and (min-width: 768px) {
     body {
         background-color: #EFEFEF;
