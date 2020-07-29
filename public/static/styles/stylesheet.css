@@ -1,6 +1,12 @@
+body {
+    margin: 0px;
+    --main-size: 200px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 .mid {
     display: flex;
-	justify-content: center;
+    justify-content: center;
 }
 
 #header {
@@ -19,10 +25,7 @@
     padding: 0px 20px 0px 20px;
 }
 
-body {
-    margin: 0px;
-    --main-size: 200px;
-}
+
 
 #cards {
     display: flex;
@@ -37,8 +40,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2px;
-    background-color: #EFEFEF;
+    margin-top: 4px;
+	background-color: #EFEFEF;
+	transition: border-color 500ms linear;
+
 }
 
 .cards {
@@ -55,6 +60,17 @@ body {
     margin-left: 10px;
     margin-top: 0px;
     min-width: 100px;
+    box-shadow: 3px 2px 5px 1px #6F98A8;
+    font-weight: bold;
+}
+
+.btn:active {
+    transform: scale(0.98);
+    box-shadow: 2px 2px 1px 1px #6F98A8;
+}
+
+.btn:focus {
+    outline: 0;
 }
 
 h4 {
@@ -62,9 +78,11 @@ h4 {
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.footer{
-	padding: 20px;
+
+.footer {
+    padding: 20px;
 }
+
 .c1 {
     border-left: 10px solid #6F98A8
 }
@@ -109,9 +127,7 @@ h4 {
     justify-content: center;
     padding: 20px 0px 20px 0px;
 }
-.btn:active { 
-	transform: scale(0.98); 
-} 
+
 @media only screen and (min-width: 768px) {
     body {
         background-color: #EFEFEF;
@@ -131,25 +147,25 @@ h4 {
     }
 
     #main {
-		display: flex;
-		flex-direction: row;
+        display: flex;
+        flex-direction: row;
         padding: 0px;
     }
 
     .card {
         width: 33.33%;
         height: var(--main-size);
-		border-left: unset !important;
-		margin-top: unset;
-		
+        border-left: unset !important;
+        margin-top: unset;
+		transition: background-color 500ms linear;
+
     }
 
     .btn {
         width: 150px;
         height: 40px;
         margin-top: 20px;
-		margin-left: 0px;
-		font-weight: bold;
+        margin-left: 0px;
     }
 
     .menu {
