@@ -30,9 +30,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     color: #333333;
-	font-size: 24px;
+    font-size: 24px;
     width: 100%;
-	
+
 }
 
 .card {
@@ -42,8 +42,8 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 4px;
-	background-color: #EFEFEF;
-	transition: border-color 500ms linear;
+    background-color: #EFEFEF;
+    transition: border-color 500ms linear;
 
 }
 
@@ -124,6 +124,7 @@ h4 {
     justify-content: center;
     padding: 20px 0px 20px 0px;
 }
+
 /* Large screens */
 @media only screen and (min-width: 768px) {
     body {
@@ -134,13 +135,18 @@ h4 {
     .header {
         background: unset;
         color: unset;
+
+    }
+
+    .mid {
+        width: 75% !important;
     }
 
     .cards {
         width: 75%;
         color: #ffffff;
         font-size: 60px;
-
+        padding-left: 20px;
     }
 
     .main {
@@ -154,7 +160,7 @@ h4 {
         height: 200px;
         border-left: unset !important;
         margin-top: unset;
-		transition: background-color 500ms linear;
+        transition: background-color 500ms linear;
 
     }
 
